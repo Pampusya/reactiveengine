@@ -1,0 +1,543 @@
+.placebutton
+  {
+    
+    display: flex;
+    justify-content: end;
+  }
+
+.slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border: none;
+ }
+ 
+ .middle {
+    position: absolute;
+    top: 0%;
+ }
+ 
+ .navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 10;
+ }
+ 
+ .bar {
+    width: 30px;
+    height: 8px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #ffffff;
+    opacity: .5;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+
+ }
+ 
+ .bar:hover {
+    opacity: 1;
+    transform:scale(1.1);
+ }
+ 
+ input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+ }
+ 
+ .slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+ }
+ 
+ .slide {
+    display: flex;
+    justify-content: center;
+    
+    width: 25%;
+    transition: all 0.6s ease;
+ }
+ 
+ .img {
+    height: 100%;
+    width: auto; 
+ }
+
+ .category
+ {
+    width: 160px;
+    position: absolute;
+    z-index: 10;
+    margin-left: 20px;
+    color: #ffffff;
+    margin-top: 10px;
+    label{
+        margin-top: -15px;
+        cursor: pointer;
+        transition: all 0.4s ease;
+        
+    }
+    h1{
+        font-weight: 100;
+    }
+ }
+
+ #r1:checked ~ .s1 {
+    margin-left: 0;
+    z-index: 1;
+ }
+ #r1:checked ~ .s2 {
+    z-index: 0;
+ }
+ #r1:checked ~ .s2 {
+    z-index: 0;
+ }
+
+ #r2:checked ~ .s1 {
+    margin-left: -25%; 
+    z-index: 0;
+ }
+ #r2:checked ~ .s2 {
+    z-index: 1;
+ }
+ #r2:checked ~ .s3 {
+    z-index: 0;
+ }
+ 
+ #r3:checked ~ .s1 {
+    margin-left: -50%;
+ }
+ #r3:checked ~ .s2 {
+    z-index: 0;
+ }
+ #r3:checked ~ .s3 {
+    z-index: 1;
+ }
+ #r3:checked ~ .s4 {
+    z-index: 0;
+ }
+ 
+ #r4:checked ~ .s1 {
+    margin-left: -75%;
+ }
+ #r4:checked ~ .s3 {
+    z-index: 0;
+ }
+ #r4:checked ~ .s4 {
+    z-index: 1;
+ }
+ a{
+    text-decoration: none;
+ }
+ .conteinercars
+ {
+    margin-top: 430px;
+    .carline{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 120px;
+        .alreadycar{ 
+            flex-direction: column;
+            width: 450px;
+            height: 150px;
+            background-color: #ffffff6d;
+            border: 2px solid #ffffff8f;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            .rentcarimage{
+                display: flex;
+                justify-content: center;
+                height: 50%;
+                font-family:courier, courier new, serif;
+
+                img{
+                    margin-top: -65px;
+                    transform: scale(2.0);
+                }   
+            }
+            .textrent
+            {
+                font-size: 25px;
+                margin-top: -20px;
+                text-align: center;
+                color: #ffffff;
+ 
+            }
+            .textrentprice
+            {
+                font-size: 25px;
+                margin-top: -30px;
+                text-align: end;
+                margin-right: 10px;
+                color: #ffffff;
+            }
+
+         }
+    }
+
+ }
+.create_car{
+   right: 30px;
+   position: fixed;
+   bottom: 30px;
+   
+   .create_button{
+      font-family:courier, courier new, serif;
+      background-color: black;
+      color: #fff;
+      font-size: 50px;
+      font-weight: 900;
+      border: 4px solid #ec9900;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      .plus{
+         position: absolute;
+         top: -4px;
+         left: 20%;
+      }
+
+   }
+}
+.window{
+   display: flex;
+   flex-direction: row;
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.779);
+   -webkit-backdrop-filter:  blur(7px);
+   backdrop-filter: blur(7px);
+   z-index: 15;
+   top: 0%;
+   .write_foto{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      label{
+         display: flex;
+         justify-content: center;
+         color: #fff;
+         font-size: 40px;
+      }
+      .iconcar{
+         margin-top: -30px;
+         display: flex;
+         justify-content: center;
+         transform: scale(0.75);
+      }
+
+      .iconin::-webkit-file-upload-button {
+         display: flex;
+         justify-content: center;
+         width: 50%;
+         visibility: hidden;
+       }
+       .iconin{
+
+         width: 170px;
+         margin: auto;
+         display: flex;
+         justify-content: center;
+         font-family:courier, courier new, serif;
+         color: #ffffffda;
+       }
+      .iconin::before{
+         width:40%;
+         margin: auto;
+         display: flex;
+         justify-content: center;
+         width: 170px;
+         content: 'Select foto';
+         font-family:courier, courier new, serif;
+         color: #ffffffda;
+         border: 2px solid #FFA500; 
+         border-radius: 3px;
+         padding: 5px 8px;
+         outline: none;
+         white-space: nowrap;
+         -webkit-user-select: none;
+         cursor: pointer;
+         font-weight: 700;
+         font-size: 18px;
+         margin: auto;
+         
+       }
+       
+   }
+   .write_fields{
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      
+      label {
+         font-family:courier, courier new, serif;
+         display: block;
+         margin-top: 20px;
+         font-size: 22px;
+         font-weight: 500;
+         color: #fff;
+         margin-left: 2%;
+       }
+      
+      input {
+         
+         font-family:courier, courier new, serif;
+         display: block;
+         height: 50px;
+         width: 300px;
+         background-color: rgba(37, 37, 37, 0.566);
+         border: 2px solid transparent;
+         border-radius: 3px;
+         padding: 0 10px;
+         margin-top: 8px;
+         font-size: 18px;
+         font-weight: 300;
+         color: #ffffffda;
+         border-top-right-radius: 10px;
+         border-bottom-left-radius: 10px;
+         border: 2px solid #FFA500; 
+         &::placeholder{
+            color: #919191;
+         }
+      }
+      select{
+         font-family:courier, courier new, serif;
+         display: block;
+         height: 50px;
+         width: 300px;
+         background-color: rgba(37, 37, 37, 0.397);
+         border: 2px solid transparent;
+         border-radius: 3px;
+         padding: 0 10px;
+         margin-top: 8px;
+         font-size: 18px;
+         font-weight: 300;
+         color: #ffffffda;
+         border-top-right-radius: 10px;
+         border-bottom-left-radius: 10px;
+         border: 2px solid #FFA500; 
+         option{
+            background-color: rgba(0, 0, 0, 0.509);
+            border-radius: 50%;
+         }
+      }
+      .buttonsu{
+         display: flex;
+         flex-direction: row;
+         height: 50px;
+         width: 300px;
+         .create_but1{
+            cursor: pointer;
+            width: 45%;
+            font-family:courier, courier new, serif;
+            display: block;
+            height: 50px;
+            background-color: rgba(37, 37, 37, 0.397);
+            border: 2px solid transparent;
+            border-radius: 3px;
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #ffffffda;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 2px solid #FFA500; 
+         }
+         .create_but2{
+            cursor: pointer;
+            width: 45%;
+            margin-left: 30px;
+            font-family:courier, courier new, serif;
+            display: block;
+            height: 50px;
+            background-color: rgba(37, 37, 37, 0.397);
+            border: 2px solid transparent;
+            border-radius: 3px;
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: 300;
+            color: #ffffffda;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border: 2px solid #FFA500; 
+         }
+      }
+      }
+      
+   }
+ @media only screen and (max-width: 650px) {
+    
+    .category
+    {
+        margin-top: -135px;
+    }
+    .conteinercars
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 160px; 
+        .carline{
+            display: flex;
+            flex-direction: column;
+            margin-right: auto; 
+            margin-left: auto;
+            margin-top: 0px;
+            .alreadycar{
+                margin-top: 130px;
+            }
+        }
+    }
+    .window{
+      display: flex;
+      flex-direction: column;
+      .write_foto{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: 100%;
+         label{
+            margin-left: -20%;
+         }
+         .iconcar{
+            margin-top: -75px;
+            margin-right: -70%;
+            display: flex;
+            justify-content: center;
+            transform: scale(0.75);
+            height: 70px;
+            img{
+               height: 100%;
+            }
+         }
+      }
+      .write_fields{
+         display: flex;
+         flex-direction: column;
+         margin: auto;
+         width: 100%;
+         label {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            
+          }
+         
+         input {
+            margin: auto;
+            height: 45px;
+         }
+         select{
+            margin: auto;
+            height: 45px; 
+            option{
+               background-color: rgba(0, 0, 0, 0.509);
+               border-radius: 50%;
+            }
+         }
+         .buttonsu{
+            margin: auto;
+            height: 44px;
+            width: 300px;
+            .create_but1{}
+         }
+         
+      }
+   }
+    
+ }
+ @media only screen and (max-width: 950px) and (min-width: 650px) {
+    .conteinercars
+    { 
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 300px;
+        margin-right: auto; 
+        margin-left: auto; 
+        .carline{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: auto; 
+            margin-left: auto;
+            margin-top: 0px;
+            .alreadycar{
+                margin-top: 130px;
+            }
+        }
+    }
+    .window{
+      display: flex;
+      flex-direction: column;
+      .write_foto{
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         width: 100%;
+         label{
+            margin-left: -10%;
+         }
+         .iconcar{
+            margin-top: -75px;
+            margin-right: -50%;
+            display: flex;
+            justify-content: center;
+            transform: scale(0.75);
+            height: 70px;
+            img{
+               height: 100%;
+            }
+         }
+      }
+      .write_fields{
+         display: flex;
+         flex-direction: column;
+         margin: auto;
+         width: 100%;
+         label {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 10px;
+            
+          }
+         
+         input {
+            margin: auto;
+            height: 45px;
+         }
+         select{
+            margin: auto;
+            height: 45px; 
+            option{
+               background-color: rgba(0, 0, 0, 0.509);
+               border-radius: 50%;
+            }
+         }
+         .buttonsu{
+            margin: auto;
+            height: 44px;
+            width: 300px;
+            .create_but1{}
+         }
+         
+      }
+   }
+ }
+
+ 
+ 
+ 
+
+

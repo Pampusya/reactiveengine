@@ -1,0 +1,156 @@
+.allrent{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    .desc{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        .imgmini{
+            width: 60%;
+            z-index: -10;
+            img{
+                
+                width: 500px;
+                transform: scale(1.4);
+                margin-left: 120px;
+                margin-top: 50px;
+                transition: all 1s;
+            }
+        }
+        .info{
+            width: 40%;
+            color: #fff;
+            h2{
+                font-size: 45px;
+                color: #ffffffdd;
+            }
+            p{
+                font-size: 30px;
+                margin-left: -10px;
+            }
+        }
+        
+    }
+    .calendar{
+        margin-top: 60px;
+        display: flex;
+        justify-content: end;
+        color: #fff;
+        margin-right: 12%;
+        font-size: 25px;
+        .st{
+            margin-right: 7%;
+
+            input{
+                margin-left: 20px;
+                transform: scale(1.5);
+                background-color: #ffffff72;
+                color: #fff;
+                border-radius: 2px;
+                border-color: #ffffffa4;
+            }
+        }
+        .en{
+
+            input{
+                margin-left: 20px;
+                transform: scale(1.5);
+                background-color: #ffffff72;
+                color: #fff;
+                border-radius: 2px;
+                border-color: #ffffffa4;
+            }
+        }
+    }
+    .brent{
+        margin-top: 20px;
+        display: flex;
+        justify-content: end;
+        .butr{
+            margin-right: 12%;
+            font-family:courier, courier new, serif;
+            height: 60%;
+            padding: 10px 12px;
+            cursor: pointer;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: transparent; 
+            color: #fff; 
+            border: 2px solid #FFA500; 
+            font-size: 30px; 
+            font-weight: 600;
+            &:hover {
+                font-weight: 700;
+                background-color: #ffffff33;
+                color: #fff;
+                border-color: #fff;
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
+          } 
+        }
+    }
+}
+@media only screen and (max-width: 680px) {
+    .allrent{
+        .desc{
+            display: flex;
+            flex-direction: column;
+            .imgmini{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                img{
+                    margin-top: -100px;
+                    transform: scale(1);
+                    margin-left: 0px;
+                }
+            }
+            .info{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .calendar{
+            margin-left: 50px;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 860px) and (min-width: 680px){
+    .allrent{
+        .desc{
+            display: flex;
+            flex-direction: column;
+            .imgmini{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                img{
+                    transform: scale(1.2);
+                    margin-left: 0px;
+                }
+            }
+            .info{
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+} 
+@media only screen and (max-width: 1200px) and (min-width: 860px){
+    .allrent{
+        .desc{
+            .imgmini{
+                img{
+                    transform: scale(1);
+                    margin-top: 10px;
+                    margin-left: 25px;
+                }
+            }
+        }
+    }
+
+} 

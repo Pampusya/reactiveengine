@@ -1,0 +1,454 @@
+.allpfofile{
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .pcard{
+      
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 270px;
+      background-color: rgba(255, 255, 255, 0.205);
+      outline: 2px solid #ffffff7a;
+      -webkit-backdrop-filter:  blur(5px);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      transition: 0.5s;
+      
+      &:hover{
+        height: 345px;
+        transition: 0.4s;
+        -webkit-backdrop-filter:  blur(5px);
+        backdrop-filter: blur(5px);
+      }
+      &:hover .content .initials{
+        transform: translateY(65px);
+      }
+      .content{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        .initials{
+          text-align: center;
+          width: 100%;
+          transition: 0.5s;
+          color: #fff;
+          font-size: 25px;
+          transform: translateY(90px);
+          .butonsu{
+            display: flex;
+            flex-direction: row;
+            .buttonedit{
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              padding-top: 20px;
+              button{
+                font-family:courier, courier new, serif;
+                cursor: pointer;
+                width: 120px;
+                height: 35px;
+                border-top-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                background-color: transparent; 
+                color: #fff; 
+                border: 2px solid #FFA500; 
+                font-size: 20px; 
+                font-weight: 600;
+      
+              }
+              
+            }
+          }
+          
+          
+        }
+        
+      }
+      
+      .pimg{
+        position: absolute;
+        width: 170px;
+        height: 170px;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border-radius: 90px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+        transition: 0.5s;
+        overflow: hidden;
+        img{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &:hover .pimg{
+        border-radius: 25px;
+        transition: 0.4s;
+        width: 190px;
+        height: 190px;
+        margin-top: -20px;
+      }
+
+    }
+    .blocks{
+      
+      margin-top: 70px;
+      text-align: center;
+      color: #fff;
+      width: 55%;
+      height: auto;
+      h2{
+        margin-top: -100px;
+        font-size: 50px;
+        font-weight: 900;
+        color: #ffffffc6;
+      }
+      .conteinercars
+      {
+        margin-top: 90px;
+        .carline{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          a {
+            text-decoration: none;
+          }
+          .alreadycar{ 
+            
+            flex-direction: column;
+            width: 300px;
+            height: 130px;
+            background-color: #ffffff6d;
+            border: 2px solid #ffffff8f;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            .rentcarimage{
+              display: flex;
+              justify-content: center;
+              height: 50%;
+              font-family:courier, courier new, serif;
+
+              img{
+                margin-top: -50px;
+                transform: scale(1.6);
+              }   
+            }
+            .textrent
+            {
+
+              font-size: 22px;
+              margin-top: -20px;
+              text-align: center;
+              color: #ffffff;
+
+            }
+            .textrentprice
+            {
+
+              font-size: 22px;
+              margin-top: 15px;
+              text-align: end;
+              margin-right: 10px;
+              color: #ffffff;
+            }
+
+
+          }
+        }
+
+      }
+    }
+  }
+  .edit_back{
+    top: -1px;
+    position: fixed;
+    width: 100%;
+    height: 101%;
+    background-color: rgba(0, 0, 0, 0.667);
+    -webkit-backdrop-filter:  blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: 15;
+    .changes_edit{
+      position: absolute;
+      text-align: center;
+      top: 45%;
+      left: 50%;
+      right: 50%;
+      width: 300px;
+      height: 260px;
+      background-color: rgba(255, 255, 255, 0.251);
+      outline: 2px solid #ffffff7a;
+      -webkit-backdrop-filter:  blur(5px);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      transition: 0.5s;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      label {
+        font-family:courier, courier new, serif;
+        display: block;
+        margin-top: 30px;
+        font-size: 22px;
+        font-weight: 500;
+      }
+      .iconin::-webkit-file-upload-button {
+        display: flex;
+        justify-content: center;
+        visibility: hidden;
+      }
+      .iconin{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        font-family:courier, courier new, serif;
+        color: red;
+      }
+     .iconin::before{
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        content: attr(data-content);
+        font-family:courier, courier new, serif;
+        color: #ffffffda;
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        font-size: 20px;
+        margin: auto;
+        padding-top: 12px;
+
+        
+      }
+      input {
+        margin-left: 10%;
+        font-family:courier, courier new, serif;
+        display: block;
+        height: 50px;
+        width: 80%;
+        background-color: rgba(37, 37, 37, 0.397);
+        border: 2px solid transparent;
+        border-radius: 3px;
+        padding: 0 10px;
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 300;
+        color: #fff;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border: 2px solid #FFA500; 
+      }
+      input:-webkit-autofill,
+      input:-webkit-autofill:hover,
+      input:-webkit-autofill:focus,
+      input:-webkit-autofill:active {
+          transition: background-color 5000s ease-in-out 0s;
+      }
+      input:-webkit-autofill{
+          -webkit-text-fill-color: rgb(255, 255, 255) !important;
+      }
+      
+      ::-webkit-input-placeholder {
+        color: #e5e5e5;
+      }
+      
+      ::-moz-placeholder {
+        color: #e5e5e5;
+      }
+      
+      :-ms-input-placeholder {
+        color: #e5e5e5;
+      }
+      
+      ::-ms-input-placeholder {
+        color: #e5e5e5;
+      }
+      
+      ::placeholder {
+        color: #e5e5e5;
+      }
+      .butonsu{
+        display: flex;
+        flex-direction: row;
+        margin-top: 10%;
+        .buttonchange{
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          padding-top: 20px;
+          button{
+            font-family:courier, courier new, serif;
+            cursor: pointer;
+            width: 120px;
+            height: 35px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: transparent; 
+            color: #fff; 
+            border: 2px solid #FFA500; 
+            font-size: 20px; 
+            font-weight: 600;
+  
+          }
+          
+        }
+      }
+    }
+
+  }
+  
+  @media only screen and (max-width: 650px){
+    .allpfofile{
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      .pcard{
+        margin: auto;
+      }
+      .blocks{
+        width: 100%;
+        margin-top: 140px;
+        .conteinercars{
+          margin-top: -10px;
+          display: flex;
+          justify-content: center;
+          .carline{
+            display: flex;
+            flex-direction: column;
+            
+            .alreadycar{
+              margin-top: 100px;
+              width: 370px; 
+              .rentcarimage{ 
+                img{
+                  margin-top: -55px;
+                  transform: scale(1.75);
+                }   
+              }
+              .textrent
+              {
+  
+                font-size: 22px;
+                margin-top: -20px;
+  
+              }
+              .textrentprice
+              {
+  
+                font-size: 22px;
+                margin-top: 15px;
+                text-align: end;
+              }
+  
+          }
+        }
+      }
+    }
+  }
+  }
+  @media only screen and (max-width: 835px) and (min-width: 650px){
+    .allpfofile{
+      //margin-top: 500px;
+      display: flex;
+      flex-direction: column;
+      .pcard{
+        margin: auto;
+      }
+      .blocks{
+        width: 100%;
+        margin-top: 140px;
+        .conteinercars{
+          margin-top: -10px;
+          display: flex;
+          justify-content: center;
+          .carline{
+            display: flex;
+            flex-direction: column;
+            
+            .alreadycar{
+              margin-top: 100px;
+              width: 370px; 
+              .rentcarimage{ 
+                img{
+                  margin-top: -55px;
+                  transform: scale(1.75);
+                }   
+              }
+              .textrent
+              {
+  
+                font-size: 22px;
+                margin-top: -20px;
+  
+              }
+              .textrentprice
+              {
+  
+                font-size: 22px;
+                margin-top: 15px;
+                text-align: end;
+              }
+  
+          }
+        }
+      }
+    }
+  }
+    
+
+  }
+  @media only screen and (max-width: 1135px) and (min-width: 835px){
+    .allpfofile{
+      
+      .blocks{
+        .conteinercars{
+          margin-top: 0px;
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin: auto;
+          .carline{
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            .alreadycar{ 
+              width: 370px;
+              margin-top: 100px;
+              .rentcarimage{ 
+                img{
+                  margin-top: -55px;
+                  transform: scale(1.75);
+                }   
+              }
+              .textrent
+              {
+                font-size: 25px;
+                margin-top: -20px;
+              }
+              .textrentprice
+              {
+                font-size: 25px;
+                margin-top: 10px;
+                text-align: end;
+              }
+  
+          }
+        }
+      }
+    }
+  }
+
+  }

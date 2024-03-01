@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { Route, Routes, Link } from 'react-router-dom';
+import Mainpage from './pages/mainpage';
+import Hed from './compact/header/Hed';
+import Profilepage from './pages/profilepage';
+import Catalog from './pages/catalog';
+import Singinpage from './pages/singin';
+import Singuppage from './pages/singup';
+import Infoauto from './pages/infoauto';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={<Hed/>}>
+          <Route index element={<Mainpage/>}/>
+          <Route path='profile/:id' element={<Profilepage/>}/>
+          <Route path='catalog' element={<Catalog/>}/>
+          <Route path='in' element={<Singinpage/>}/>
+          <Route path='up' element={<Singuppage/>}/>
+          <Route path='car/:id' element={<Infoauto/>}/>
+        </Route>
+      </Routes>
+    </>
   );
 }
 

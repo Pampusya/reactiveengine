@@ -30,10 +30,11 @@
       "axios": "axios/dist/node/axios.cjs"
     },
     "collectCoverageFrom": [
-      "!./src/index.js",
-      "./src/pages/*.{js,jsx}"
+      "!./index.js",
+      "./*/*.{js,jsx}"
     ]
   },
+  
   "eslintConfig": {
     "extends": [
       "react-app",
